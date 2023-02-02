@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  <!-- CSS only -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous" />
+  <title>Vite App</title>
+  <!-- JavaScript Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+          crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg bg-light position-sticky" style="top: 0;">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">
+      <h5>MyAnimeList</h5>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <div class="navbar-nav me-auto">
+      </div>
+      <form class="d-flex" role="search">
+        <button class="btn btn-outline-danger" type="submit">Logout</button>
+      </form>
+    </div>
+  </div>
+</nav>
+<!-- END OF NAVBAR -->
+
+<!-- LOGIN PAGE -->
+<section id="login-page">
+  <div class="container-sm py-5">
+    <h3 class="text-center">Welcome To MyAnimeList</h3>
+    <form class="w-50 mx-auto py-5">
+      <div class="mb-3">
+        <label for="login-email" class="form-label">Email address</label>
+        <input type="email" class="form-control" id="login-email"
+               aria-describedby="emailHelp">
+      </div>
+      <div class="mb-3">
+        <label for="login-password" class="form-label">Password</label>
+        <input type="password" class="form-control" id="login-password">
+      </div>
+      <div class="d-flex justify-content-center">
+        <button type="submit" class="btn btn-primary px-3">Login</button>
+      </div>
+    </form>
+  </div>
+</section>
+<!-- END OF LOGIN PAGE -->
+
+<!-- HOME PAGE -->
+<section id="home-page" style="position: relative">
+  <div class="container">
+    <div class="d-flex justify-content-between">
+      <div class="d-flex align-items-center justify-content-end w-100">
+        <h2 class="text-center pm-3">My Anime List</h2>
+      </div>
+      <div class="w-100 d-flex justify-content-end">
+        <button class="text-right btn btn-primary "
+                type="button">
+          Add Anime
+        </button>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="card m-2 p-0" style="width: 15rem">
+        <img
+          style="cursor: pointer"
+          src="https://cdn.myanimelist.net/images/anime/5/87048.jpg"
+          alt="Your Name"
+          class="card-img-top"
+        />
+        <div class="card-body">
+          <h5 class="card-title" style="font-weight: bold">Your Name</h5>
+          <p class="card-text">Mitsuha Miyamizu, a high school girl, yearns to live the life of a boy in the bustling city of...</p>
+        </div>
+        <div class="p-1">
+          <button
+            class="btn btn-danger w-100"
+          >
+            Delete
+          </button>
+        </div>
+      </div>
+      <div class="card m-2 p-0" style="width: 15rem">
+        <img
+          style="cursor: pointer"
+          src="https://cdn.myanimelist.net/images/anime/1613/102576.jpg"
+          alt="Dr. Stone"
+          class="card-img-top"
+        />
+        <div class="card-body">
+          <h5 class="card-title" style="font-weight: bold">Dr. Stone</h5>
+          <p class="card-text">After five years of harboring unspoken feelings, high-schooler Taiju Ooki is finally ready to...</p>
+        </div>
+        <div class="p-1">
+          <button
+            class="btn btn-danger w-100"
+          >
+            Delete
+          </button>
+        </div>
+      </div>
+      <div class="card m-2 p-0" style="width: 15rem">
+        <img
+          style="cursor: pointer"
+          src="https://cdn.myanimelist.net/images/anime/1935/127974.jpg"
+          alt="Stein's Gate"
+          class="card-img-top"
+        />
+        <div class="card-body">
+          <h5 class="card-title" style="font-weight: bold">Stein's Gate</h5>
+          <p class="card-text">Eccentric scientist Rintarou Okabe has a never-ending thirst for scientific exploration. Together with...</p>
+        </div>
+        <div class="p-1">
+          <button
+            class="btn btn-danger w-100"
+          >
+            Delete
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</section>
+<!-- END OF HOME PAGE -->
+
+<!-- ADD ANIME PAGE -->
+<section id="create-page">
+  <div class="container">
+    <h2>Add Anime List</h2>
+    <form>
+      <div class="mb-3">
+        <label for="create-title" class="form-label">Title</label>
+        <input type="text" class="form-control" id="create-title" aria-describedby="creatingTitle">
+      </div>
+      <div class="mb-3">
+        <label for="create-imageUrl" class="form-label">Image URL</label>
+        <input type="text" class="form-control" id="create-imageUrl" aria-describedby="creatingTitle">
+      </div>
+      <div class="mb-3">
+        <label for="create-sinopsis" class="form-label">Sinopsis</label>
+        <textarea class="form-control" id="create-sinopsis" rows="5"></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary">Create</button>
+      <button type="button" class="btn btn-secondary mx-2">Cancel</button>
+    </form>
+  </div>
+</section>
+<!-- END OF ADD ANIME PAGE -->
+
+</body>
+
+</html>
